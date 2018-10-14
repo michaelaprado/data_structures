@@ -23,11 +23,27 @@ class LinkedList:
         nodo1 = Node(value)
         nodo1.next = self.head
         self.head = nodo1
+    def delete_first(self): 
+        if(self.head == None):
+            print("nothing can be deleted")
+        elif(lista.head.next == None):
+            self.head = None
+        else:
+            a = self.head #assing head to a
+            self.head = self.head.next 
+            a = None
+    def count(self):
+        i = 0 #declaring i
+        a = self.head
+        while(a != None):
+            i = i+1
+            a = a.next
+        return i
 
 lista = LinkedList()
-lista.add(1)
-lista.add(2)
-lista.add(3)
-lista.add_at_first(4)
+
+lista.delete_first()
 lista.print_nodes()
+
+
 
