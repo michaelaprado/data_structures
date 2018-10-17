@@ -39,10 +39,23 @@ class LinkedList:
             i = i+1
             a = a.next
         return i
+    def delete_last(self):
+        if (self.head == None):
+            print("No se puede borrar")
+        elif (self.head.next == None):
+            self.head = None
+        else:
+            a = self.head
+            while(a.next.next != None):
+                a = a.next
+            a.next = None 
+            return
 
 lista = LinkedList()
-
-lista.delete_first()
+lista.add(1)
+lista.add(2)
+lista.add(3)
+lista.delete_last()
 lista.print_nodes()
 
 
